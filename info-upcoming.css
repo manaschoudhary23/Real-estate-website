@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 5px 3px lightgray;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.607);
+    padding: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navBar h3 {
+    display: flex;
+    justify-content: left;
+    margin-left: 80px;
+    color: #16A085;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.navBar a {
+    display: inline-block;
+}
+
+a#btn1 {
+    margin-left: 100px;
+    text-decoration: none;  
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#btn1 {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #25D366;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px !important;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+#btn1 i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+#btn {
+    margin-top: 18px;
+    margin-left: 230px;
+    padding: 10px 9px;
+    cursor: pointer;
+    border: none;
+    background-color: lightskyblue;
+    color: white;
+    font-style: italic;
+}
+
+.fa-bars:before, .fa-navicon:before {
+    content: "\f0c9";
+    font-size: 30px;
+}
+
+.fa-close:before, .fa-multiply:before, .fa-remove:before, .fa-times:before, .fa-xmark:before {
+    font-size: 30px;
+    content: "\f00d";
+}
+
+.navBar.hidden {
+    transform: translateY(-100%);
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    z-index: 999;
+    background: linear-gradient(120deg, #36d1dcaf, #5b87e5b3);
+    backdrop-filter: blur(10px);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.5s ease;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sideBar.active {
+    right: 0;
+}
+
+.sideBar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    font-size: 35px;
+}
+
+.sideBar li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#home{
+    text-decoration: none;
+}
+
+.sideBar a {
+    width: 100%;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    display: block;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.sideBar a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
+
+.contact {
+    color:white;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+}
+
+.contact ul {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact i {
+    margin-right: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+    color: #d9534f;
+    font-size: 28px;
+}
+
+.getInTouch {
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.getInTouch h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.address h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ddd;
+    font-weight: 400;
+}
+
+.address h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.getInTouch a {
+    text-decoration: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.icons i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+.icons i:hover {
+    color: goldenrod;
+    transform: scale(1.2);
+}
+
+.projectDescription {
+    padding-top: 110px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    font-size: 23px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.informationOfProject {
+    flex: 1;
+}
+
+.imagesBuilding {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.building {
+    margin-right: 50px;
+    max-width: 400px;
+    height: auto;
+}
+
+.gallery {
+    margin-top: 60px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery h3 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.projectImg {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.galleryImage {
+    width: 400px;
+    height: 500px;
+}
